@@ -25,8 +25,8 @@ const getOptions = () => ({
     },
   ],
   headerOptionBasket: {
-    classOne: "header__optionLineOne",
     classTwo: "header__optionLineTwo",
+    classCount: "header__basketCount",
   },
 });
 
@@ -41,7 +41,7 @@ export default function Header() {
       />
       <div className="header__search">
         <input className="header__searchInput" />
-        <SearchIcon className="header_searchIcon" />
+        <SearchIcon className="header__searchIcon" />
       </div>
       <HeaderNav {...{ headerOptions, headerOptionBasket }} />
     </div>
