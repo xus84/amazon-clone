@@ -27,7 +27,8 @@ function Login() {
                     <h5>Password</h5>
                     <input type='password' value={password} onChange={e => setPassword(e.target.value)} />
 
-                    <button type='submit' className='login__signInButton'>Sign In</button>
+                    <button 
+                     type='submit' className='login__signInButton'>Sign In</button>
                 </form>
 
                 <p>

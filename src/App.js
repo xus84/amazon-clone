@@ -5,6 +5,12 @@ import Home from "./Home";
 import Header from "./Header";
 import Checkout from "./Checkout";
 import Login from "./Login";
+import Payment from './Payment'
+import { loadStripe } from "@stripe/stripe-js"
+import { Elements } from "@stripe/react-stripe-js"
+
+
+const promise = loadStripe('pk_test_51ItWL3FsljR1JBuoBjwzyQHxPKsYWuYb4gwt9UpT7oPCWwNnPyOs1omRSRlmbshqsCZGE5KHR3f6trjFayWgSBzI00ZtZmYGLt');
 
 function App() {
 return (
@@ -18,6 +24,12 @@ return (
       <Route path="/checkout">
           <Header />
           <Checkout />
+        </Route>
+      <Route path="/payment">
+          <Header />
+          <Elements stripe={promise} >
+            <Payment/>
+          </Elements>
         </Route>
         <Route path="/">
           <Header/>
